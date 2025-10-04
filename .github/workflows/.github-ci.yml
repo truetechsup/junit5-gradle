@@ -1,0 +1,39 @@
+name: JUnit5 Maven Tests
+
+on:
+  repository_dispatch:
+    types: [run-tests]
+
+jobs:
+  run-tests:
+    name: Run JUnit5 tests (Java)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: 'gradle'
+
+    - name: Get data from webhook
+      run: |
+        echo "TEST_RUN_ID=${{ github.event.client_payload.test_run_id }}" >> $GITHUB_ENV
+        echo "PROJECT_ID=${{ github.event.client_payload.project_id }}" >> $GITHUB_ENV
+        echo "CONFIGURATION_IDS=${{ github.event.client_payload.configuration_id[0] }}" >> $GITHUB_ENV
+
+    - name: Run tests
+      run: |
+        gradle test \
+          -DtmsUrl=${{ secrets.TMS_URL }} \
+          -DtmsPrivateToken=${{ secrets.TMS_PRIVATE_TOKEN }} \
+          -DtmsProjectId=$PROJECT_ID \
+          -DtmsConfigurationId=$CONFIGURATION_IDS \
+          -DtmsAdapterMode=0 \
+          -DtmsTestRunId=$TEST_RUN_ID \
+          -DtmsCertValidation=true \
+          -DtmsImportRealtime=true \
+          -DtmsTestIt=true

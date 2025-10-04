@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - StepsTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>StepsTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/examples.html">examples</a> &gt; StepsTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">4</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.975s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="stepsWithAllAnnotations_failed()"></a>
+<h3 class="failures">stepsWithAllAnnotations_failed()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:34)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:115)
+	at app//examples.StepsTests.stepsWithAllAnnotations_failed(StepsTests.java:119)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//ru.testit.listener.BaseJunit5Listener.interceptTestMethod(BaseJunit5Listener.java:222)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="stepsWithDescriptionAnnotation_failed()"></a>
+<h3 class="failures">stepsWithDescriptionAnnotation_failed()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:34)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:115)
+	at app//examples.StepsTests.stepsWithDescriptionAnnotation_failed(StepsTests.java:91)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//ru.testit.listener.BaseJunit5Listener.interceptTestMethod(BaseJunit5Listener.java:222)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="stepsWithTitleAnnotation_failed()"></a>
+<h3 class="failures">stepsWithTitleAnnotation_failed()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:34)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:115)
+	at app//examples.StepsTests.stepsWithTitleAnnotation_failed(StepsTests.java:65)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//ru.testit.listener.BaseJunit5Listener.interceptTestMethod(BaseJunit5Listener.java:222)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="stepsWithoutAnnotations_failed()"></a>
+<h3 class="failures">stepsWithoutAnnotations_failed()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError
+	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:34)
+	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:115)
+	at app//examples.StepsTests.stepsWithoutAnnotations_failed(StepsTests.java:38)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//ru.testit.listener.BaseJunit5Listener.interceptTestMethod(BaseJunit5Listener.java:222)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@17.0.14/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.14/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.14/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.14/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">stepsWithAllAnnotations_failed()</td>
+<td class="failures">0.585s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">stepsWithAllAnnotations_success()</td>
+<td class="success">0.536s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">stepsWithDescriptionAnnotation_failed()</td>
+<td class="failures">1.063s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">stepsWithDescriptionAnnotation_success()</td>
+<td class="success">0.676s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">stepsWithTitleAnnotation_failed()</td>
+<td class="failures">0.644s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">stepsWithTitleAnnotation_success()</td>
+<td class="success">0.602s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">stepsWithoutAnnotations_failed()</td>
+<td class="failures">1.198s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">stepsWithoutAnnotations_success()</td>
+<td class="success">0.671s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>2025-10-04T16:41:16.193+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Before all: examples.StepsTests
+2025-10-04T16:41:16.193+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start launch
+2025-10-04T16:41:16.193+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Test run is exist.
+2025-10-04T16:41:16.193+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start new main container class MainContainer {
+    uuid: efc4cbae-43ab-4be1-968e-d7e0d5075764
+    beforeMethods: []
+    afterMethods: []
+    children: []
+    start: 1759585276193
+    stop: null
+}
+2025-10-04T16:41:16.195+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start new class container class ClassContainer {
+    uuid: 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+    name: null
+    beforeEachTest: []
+    afterEachTest: []
+    beforeClassMethods: []
+    afterClassMethods: []
+    children: []
+    start: 1759585276195
+    stop: null
+} for parent efc4cbae-43ab-4be1-968e-d7e0d5075764
+2025-10-04T16:41:16.199+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before all: testSetup
+2025-10-04T16:41:16.199+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare all fixture class FixtureResult {
+    name: testSetup
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276199
+    stop: null
+    parameters: null
+} for parent efc4cbae-43ab-4be1-968e-d7e0d5075764
+2025-10-04T16:41:16.204+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture f27dbbba-5857-4b8b-82a2-3a02a5f37e26
+2025-10-04T16:41:16.206+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testSetup
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276199
+    stop: 1759585276204
+    parameters: null
+}
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276207
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture a131a2f1-d1c4-48e7-a0ee-7c7be681f12a
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+    start: 1759585276207
+    stop: 1759585276207
+    parameters: null
+}
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithAllAnnotations_failed
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+    externalId: 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_failed
+}
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+    externalId: 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585276207
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_failed
+}
+2025-10-04T16:41:16.207+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.219+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step07 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step07 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276219
+    stop: null
+    parameters: {}
+} for parent 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+2025-10-04T16:41:16.221+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 9ca66672-b138-47c7-92bb-f266315438a0
+2025-10-04T16:41:16.221+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step07 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step07 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276219
+    stop: 1759585276221
+    parameters: {}
+}
+2025-10-04T16:41:16.223+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step08 3 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step08 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276223
+    stop: null
+    parameters: {number=3}
+} for parent 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+2025-10-04T16:41:16.223+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 103cc3a7-3884-47be-8ce1-6c1933e83393
+2025-10-04T16:41:16.223+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step08 3 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step08 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276223
+    stop: 1759585276223
+    parameters: {number=3}
+}
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276225
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 0493908c-3a0b-4a9c-9cf0-ad15f8f455e4
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+    start: 1759585276225
+    stop: 1759585276225
+    parameters: null
+}
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test failed: stepsWithAllAnnotations_failed()
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+    externalId: 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_failed
+    title: null
+    message: null
+    itemStatus: FAILED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step07 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step07 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585276219
+        stop: 1759585276221
+        parameters: {}
+    }, class StepResult {
+        name: Step08 3 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step08 3 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585276223
+        stop: 1759585276223
+        parameters: {number=3}
+    }]
+    throwable: org.opentest4j.AssertionFailedError
+    start: 1759585276207
+    stop: 1759585276225
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_failed
+}
+2025-10-04T16:41:16.225+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+2025-10-04T16:41:16.283+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE is exist
+2025-10-04T16:41:16.283+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+2025-10-04T16:41:16.577+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 3C23E52F37638B84C5F61198669E3E65D8CAD7E2040CD44D51B3B843290676BE
+2025-10-04T16:41:16.792+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:16.792+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276792
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.792+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 45468be2-2dc1-4e2d-87e8-3e6e8747fe9f
+2025-10-04T16:41:16.792+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: eb1948cb-c166-4df3-9958-c422c35df21f
+    start: 1759585276792
+    stop: 1759585276792
+    parameters: null
+}
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithDescriptionAnnotation_failed
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: eb1948cb-c166-4df3-9958-c422c35df21f
+    externalId: 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_failed
+}
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: eb1948cb-c166-4df3-9958-c422c35df21f
+    externalId: 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585276793
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_failed
+}
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step05
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step05 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276793
+    stop: null
+    parameters: {}
+} for parent eb1948cb-c166-4df3-9958-c422c35df21f
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 23fef6a5-41d4-4236-af22-f96c502183d3
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step05
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step05 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276793
+    stop: 1759585276793
+    parameters: {}
+}
+2025-10-04T16:41:16.793+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step06
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step06 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276793
+    stop: null
+    parameters: {number=3}
+} for parent eb1948cb-c166-4df3-9958-c422c35df21f
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 4b5a6c0f-dfa7-4a4f-a0f9-79c1313f56eb
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step06
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step06 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585276793
+    stop: 1759585276794
+    parameters: {number=3}
+}
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585276794
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 0827d6e9-14e6-4b0b-8122-fff79b3f1229
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: eb1948cb-c166-4df3-9958-c422c35df21f
+    start: 1759585276794
+    stop: 1759585276794
+    parameters: null
+}
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test failed: stepsWithDescriptionAnnotation_failed()
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case eb1948cb-c166-4df3-9958-c422c35df21f
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: eb1948cb-c166-4df3-9958-c422c35df21f
+    externalId: 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_failed
+    title: null
+    message: null
+    itemStatus: FAILED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step05
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step05 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585276793
+        stop: 1759585276793
+        parameters: {}
+    }, class StepResult {
+        name: Step06
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step06 3 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585276793
+        stop: 1759585276794
+        parameters: {number=3}
+    }]
+    throwable: org.opentest4j.AssertionFailedError
+    start: 1759585276793
+    stop: 1759585276794
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_failed
+}
+2025-10-04T16:41:16.794+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+2025-10-04T16:41:16.851+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA is exist
+2025-10-04T16:41:16.851+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+2025-10-04T16:41:17.667+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 4D413C3309CA3F5A37F691BAA28E3E2A0A9D23FB93E2F6290D7BC13A7DDB0AA
+2025-10-04T16:41:17.855+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585277858
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture b432de5a-a5d6-4a12-9fb5-c0f02b1ff405
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 87c23583-8f30-4d70-b51c-33e41944dfd7
+    start: 1759585277858
+    stop: 1759585277858
+    parameters: null
+}
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithTitleAnnotation_failed
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: 87c23583-8f30-4d70-b51c-33e41944dfd7
+    externalId: E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_failed
+}
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: 87c23583-8f30-4d70-b51c-33e41944dfd7
+    externalId: E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585277858
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_failed
+}
+2025-10-04T16:41:17.858+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step03 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585277858
+    stop: null
+    parameters: {}
+} for parent 87c23583-8f30-4d70-b51c-33e41944dfd7
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step cc693893-ccb4-4d68-8fec-1251fa47b61e
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step03 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585277858
+    stop: 1759585277860
+    parameters: {}
+}
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step04 3 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585277860
+    stop: null
+    parameters: {number=3}
+} for parent 87c23583-8f30-4d70-b51c-33e41944dfd7
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 5f93b84b-22df-41ee-91f9-f3a44fc33eb9
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step04 3 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585277860
+    stop: 1759585277860
+    parameters: {number=3}
+}
+2025-10-04T16:41:17.860+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:17.862+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585277862
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:17.862+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture a8bcb027-17e1-4500-83fb-4f5c402df1b6
+2025-10-04T16:41:17.862+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 87c23583-8f30-4d70-b51c-33e41944dfd7
+    start: 1759585277862
+    stop: 1759585277862
+    parameters: null
+}
+2025-10-04T16:41:17.862+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test failed: stepsWithTitleAnnotation_failed()
+2025-10-04T16:41:17.863+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case 87c23583-8f30-4d70-b51c-33e41944dfd7
+2025-10-04T16:41:17.863+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: 87c23583-8f30-4d70-b51c-33e41944dfd7
+    externalId: E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_failed
+    title: null
+    message: null
+    itemStatus: FAILED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step03 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585277858
+        stop: 1759585277860
+        parameters: {}
+    }, class StepResult {
+        name: Step04 3 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585277860
+        stop: 1759585277860
+        parameters: {number=3}
+    }]
+    throwable: org.opentest4j.AssertionFailedError
+    start: 1759585277858
+    stop: 1759585277863
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_failed
+}
+2025-10-04T16:41:17.863+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+2025-10-04T16:41:17.932+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A is exist
+2025-10-04T16:41:17.932+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+2025-10-04T16:41:18.234+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test E0D464D1B68499E4CCDC10E890D9DA45EC8310CEDCAE1D17BDD4987489E6BC6A
+2025-10-04T16:41:18.500+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:18.502+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585278500
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:18.502+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 61fcfced-3edb-496c-9663-6b13ccd03125
+2025-10-04T16:41:18.502+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 9efb9388-32c3-4b70-af31-8394d0f28878
+    start: 1759585278502
+    stop: 1759585278502
+    parameters: null
+}
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithDescriptionAnnotation_success
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: 9efb9388-32c3-4b70-af31-8394d0f28878
+    externalId: 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_success
+}
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: 9efb9388-32c3-4b70-af31-8394d0f28878
+    externalId: 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585278503
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_success
+}
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step05
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step05 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585278503
+    stop: null
+    parameters: {}
+} for parent 9efb9388-32c3-4b70-af31-8394d0f28878
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step dd0d5266-e5c8-42ae-a614-5c303541c035
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step05
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step05 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585278503
+    stop: 1759585278503
+    parameters: {}
+}
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step06
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step06 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585278503
+    stop: null
+    parameters: {number=3}
+} for parent 9efb9388-32c3-4b70-af31-8394d0f28878
+2025-10-04T16:41:18.503+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step c6400d9b-f1cb-4f06-9107-e064d18d7628
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step06
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step06 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585278503
+    stop: 1759585278505
+    parameters: {number=3}
+}
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585278505
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 68ef0eae-ca3b-4e86-b236-9b5056038de6
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 9efb9388-32c3-4b70-af31-8394d0f28878
+    start: 1759585278505
+    stop: 1759585278505
+    parameters: null
+}
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test successful: stepsWithDescriptionAnnotation_success()
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case 9efb9388-32c3-4b70-af31-8394d0f28878
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: 9efb9388-32c3-4b70-af31-8394d0f28878
+    externalId: 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithDescriptionAnnotation_success
+    title: null
+    message: null
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step05
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step05 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585278503
+        stop: 1759585278503
+        parameters: {}
+    }, class StepResult {
+        name: Step06
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step06 3 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585278503
+        stop: 1759585278505
+        parameters: {number=3}
+    }]
+    throwable: null
+    start: 1759585278503
+    stop: 1759585278505
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithDescriptionAnnotation_success
+}
+2025-10-04T16:41:18.505+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+2025-10-04T16:41:18.577+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D is exist
+2025-10-04T16:41:18.577+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+2025-10-04T16:41:18.941+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 33F711749C0542B07A4990A96664C993911632ED6749F5EC4531006FEDEB6D8D
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585279179
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 992e14a3-8d41-41b4-92a9-73cfcf52b3fc
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: e4746774-85e5-44ba-9bf7-acd3f1124f03
+    start: 1759585279179
+    stop: 1759585279179
+    parameters: null
+}
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithoutAnnotations_success
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: e4746774-85e5-44ba-9bf7-acd3f1124f03
+    externalId: 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_success
+}
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: e4746774-85e5-44ba-9bf7-acd3f1124f03
+    externalId: 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585279179
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_success
+}
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step01
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279179
+    stop: null
+    parameters: {}
+} for parent e4746774-85e5-44ba-9bf7-acd3f1124f03
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step f9c4e67a-28eb-49e5-9b2c-fdcd372ecfd6
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step01
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279179
+    stop: 1759585279179
+    parameters: {}
+}
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step02
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279179
+    stop: null
+    parameters: {number=2}
+} for parent e4746774-85e5-44ba-9bf7-acd3f1124f03
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 25bfd7d9-afb6-4c3d-aa2d-fd47487e88f6
+2025-10-04T16:41:19.179+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step02
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279179
+    stop: 1759585279179
+    parameters: {number=2}
+}
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585279181
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture a27bea4c-5a36-4b93-b805-a004b2384e73
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: e4746774-85e5-44ba-9bf7-acd3f1124f03
+    start: 1759585279181
+    stop: 1759585279181
+    parameters: null
+}
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test successful: stepsWithoutAnnotations_success()
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case e4746774-85e5-44ba-9bf7-acd3f1124f03
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: e4746774-85e5-44ba-9bf7-acd3f1124f03
+    externalId: 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_success
+    title: null
+    message: null
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step01
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585279179
+        stop: 1759585279179
+        parameters: {}
+    }, class StepResult {
+        name: Step02
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585279179
+        stop: 1759585279179
+        parameters: {number=2}
+    }]
+    throwable: null
+    start: 1759585279179
+    stop: 1759585279181
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_success
+}
+2025-10-04T16:41:19.181+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+2025-10-04T16:41:19.238+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510 is exist
+2025-10-04T16:41:19.238+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+2025-10-04T16:41:19.568+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 754877973FF6817E5B6AD7691D78248485F059353D2FA7EC805BF51EE2AEF510
+2025-10-04T16:41:19.850+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:19.852+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585279852
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.852+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 7893e4d0-4e22-4af8-880b-72251fafcbff
+2025-10-04T16:41:19.852+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 935cc52f-b064-4667-af95-a9d4acb8ad14
+    start: 1759585279852
+    stop: 1759585279852
+    parameters: null
+}
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithTitleAnnotation_success
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: 935cc52f-b064-4667-af95-a9d4acb8ad14
+    externalId: 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_success
+}
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: 935cc52f-b064-4667-af95-a9d4acb8ad14
+    externalId: 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585279853
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_success
+}
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step03 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279853
+    stop: null
+    parameters: {}
+} for parent 935cc52f-b064-4667-af95-a9d4acb8ad14
+2025-10-04T16:41:19.853+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 8485677a-97ca-46aa-85b7-1f6a9df3cfa5
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step03 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279853
+    stop: 1759585279853
+    parameters: {}
+}
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step04 3 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279855
+    stop: null
+    parameters: {number=3}
+} for parent 935cc52f-b064-4667-af95-a9d4acb8ad14
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 891d4d28-2892-4ce8-b9a6-99ba2d72edaf
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step04 3 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585279855
+    stop: 1759585279855
+    parameters: {number=3}
+}
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:19.855+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585279855
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture bfe2fdf3-34db-4397-b1cb-e75eaa704078
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 935cc52f-b064-4667-af95-a9d4acb8ad14
+    start: 1759585279855
+    stop: 1759585279857
+    parameters: null
+}
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test successful: stepsWithTitleAnnotation_success()
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case 935cc52f-b064-4667-af95-a9d4acb8ad14
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: 935cc52f-b064-4667-af95-a9d4acb8ad14
+    externalId: 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithTitleAnnotation_success
+    title: null
+    message: null
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step03 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585279853
+        stop: 1759585279853
+        parameters: {}
+    }, class StepResult {
+        name: Step04 3 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585279855
+        stop: 1759585279855
+        parameters: {number=3}
+    }]
+    throwable: null
+    start: 1759585279853
+    stop: 1759585279857
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithTitleAnnotation_success
+}
+2025-10-04T16:41:19.857+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+2025-10-04T16:41:19.925+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8 is exist
+2025-10-04T16:41:19.925+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+2025-10-04T16:41:20.201+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 6DB5D7FAF2AE8A22005BE97D6E8340D879BD5E00C212612DAB9436646E874DF8
+2025-10-04T16:41:20.453+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:20.453+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585280453
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 2f8073c3-6f8a-446e-b73b-542d06c53350
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 592edd0e-c432-43a8-814f-73d799cabfc5
+    start: 1759585280455
+    stop: 1759585280455
+    parameters: null
+}
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithoutAnnotations_failed
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: 592edd0e-c432-43a8-814f-73d799cabfc5
+    externalId: 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_failed
+}
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: 592edd0e-c432-43a8-814f-73d799cabfc5
+    externalId: 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_failed
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585280455
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_failed
+}
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step01
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585280455
+    stop: null
+    parameters: {}
+} for parent 592edd0e-c432-43a8-814f-73d799cabfc5
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step f78ce85f-7e03-4935-be53-9f18bdf6084a
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step01
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585280455
+    stop: 1759585280455
+    parameters: {}
+}
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step02
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585280455
+    stop: null
+    parameters: {number=2}
+} for parent 592edd0e-c432-43a8-814f-73d799cabfc5
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step d15449c0-1d67-4c58-98cc-4622c66df7e8
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step02
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585280455
+    stop: 1759585280455
+    parameters: {number=2}
+}
+2025-10-04T16:41:20.455+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585280458
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture 0e03fcf8-797c-41b3-9d78-75499412649b
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: 592edd0e-c432-43a8-814f-73d799cabfc5
+    start: 1759585280458
+    stop: 1759585280458
+    parameters: null
+}
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test failed: stepsWithoutAnnotations_failed()
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case 592edd0e-c432-43a8-814f-73d799cabfc5
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: 592edd0e-c432-43a8-814f-73d799cabfc5
+    externalId: 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithoutAnnotations_failed
+    title: null
+    message: null
+    itemStatus: FAILED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step01
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585280455
+        stop: 1759585280455
+        parameters: {}
+    }, class StepResult {
+        name: Step02
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585280455
+        stop: 1759585280455
+        parameters: {number=2}
+    }]
+    throwable: org.opentest4j.AssertionFailedError
+    start: 1759585280455
+    stop: 1759585280458
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithoutAnnotations_failed
+}
+2025-10-04T16:41:20.458+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+2025-10-04T16:41:20.558+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B is exist
+2025-10-04T16:41:20.558+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+2025-10-04T16:41:20.848+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 502636F9A7495C7F16359EB9FEB5194B5F52FB9791AE4D86393F3EF78E347A0B
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept before each: testMethod
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start prepare for each fixture class FixtureResult {
+    name: testMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585281653
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture bf7b0813-3696-4f10-88e1-054fd4be4911
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: testMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: d5882d33-3eee-402c-a63f-ec04f6567890
+    start: 1759585281653
+    stop: 1759585281653
+    parameters: null
+}
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept test: stepsWithAllAnnotations_success
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Schedule test case class TestResult {
+    uuid: d5882d33-3eee-402c-a63f-ec04f6567890
+    externalId: 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: SCHEDULED
+    description: 
+    steps: []
+    throwable: null
+    start: null
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_success
+}
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start test case class TestResult {
+    uuid: d5882d33-3eee-402c-a63f-ec04f6567890
+    externalId: 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_success
+    title: null
+    message: null
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    throwable: null
+    start: 1759585281653
+    stop: null
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_success
+}
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update class container 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:21.653+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step07 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step07 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585281653
+    stop: null
+    parameters: {}
+} for parent d5882d33-3eee-402c-a63f-ec04f6567890
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step bb099a45-c9da-456c-81b8-dfefb28ef051
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step07 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step07 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585281653
+    stop: 1759585281654
+    parameters: {}
+}
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start step class StepResult {
+    name: Step08 3 Title
+    itemStatus: null
+    itemStage: RUNNING
+    description: Step08 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585281654
+    stop: null
+    parameters: {number=3}
+} for parent d5882d33-3eee-402c-a63f-ec04f6567890
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update step 509a20ce-fa19-4a50-ab4c-9a3e2782f625
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop step class StepResult {
+    name: Step08 3 Title
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: Step08 3 Description
+    steps: []
+    linkItems: []
+    attachments: []
+    throwable: null
+    start: 1759585281654
+    stop: 1759585281654
+    parameters: {number=3}
+}
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after each: teardownMethod
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down for each fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585281654
+    stop: null
+    parameters: null
+} for parent 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture d3672157-54d0-4543-b05e-353a25739ec3
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownMethod
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: d5882d33-3eee-402c-a63f-ec04f6567890
+    start: 1759585281654
+    stop: 1759585281654
+    parameters: null
+}
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Test successful: stepsWithAllAnnotations_success()
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update test case d5882d33-3eee-402c-a63f-ec04f6567890
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop test case class TestResult {
+    uuid: d5882d33-3eee-402c-a63f-ec04f6567890
+    externalId: 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+    workItemIds: []
+    className: StepsTests
+    spaceName: examples
+    labels: []
+    linkItems: []
+    resultLinks: []
+    attachments: []
+    name: stepsWithAllAnnotations_success
+    title: null
+    message: null
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: [class StepResult {
+        name: Step07 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step07 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585281653
+        stop: 1759585281654
+        parameters: {}
+    }, class StepResult {
+        name: Step08 3 Title
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: Step08 3 Description
+        steps: []
+        linkItems: []
+        attachments: []
+        throwable: null
+        start: 1759585281654
+        stop: 1759585281654
+        parameters: {number=3}
+    }]
+    throwable: null
+    start: 1759585281653
+    stop: 1759585281654
+    parameters: null
+    automaticCreationTestCases: true
+    externalKey: examples.StepsTests.stepsWithAllAnnotations_success
+}
+2025-10-04T16:41:21.654+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Write the auto test 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+2025-10-04T16:41:21.721+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - The auto test 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F is exist
+2025-10-04T16:41:21.721+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing to update the auto test 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+2025-10-04T16:41:22.013+0300 [Test worker] DEBUG ru.testit.writers.HttpWriter - Preparing the test result for the auto test 9FBC30674F734EA13324ACAAFC8AECAEDE3CB3007682BE2AC71630180A99A75F
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - Intercept after all: teardownClass
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Start tear down all fixture class FixtureResult {
+    name: teardownClass
+    itemStatus: null
+    itemStage: RUNNING
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585282188
+    stop: null
+    parameters: null
+} for parent efc4cbae-43ab-4be1-968e-d7e0d5075764
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Update fixture faa44a64-0c26-4a1f-8f7b-c4946e7b7c26
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop fixture class FixtureResult {
+    name: teardownClass
+    itemStatus: PASSED
+    itemStage: FINISHED
+    description: 
+    steps: []
+    linkItems: []
+    attachments: []
+    parent: null
+    start: 1759585282188
+    stop: 1759585282188
+    parameters: null
+}
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.listener.BaseJunit5Listener - After all: StepsTests
+2025-10-04T16:41:22.188+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop class container class ClassContainer {
+    uuid: 58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4
+    name: null
+    beforeEachTest: [class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+        start: 1759585276207
+        stop: 1759585276207
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: eb1948cb-c166-4df3-9958-c422c35df21f
+        start: 1759585276792
+        stop: 1759585276792
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 87c23583-8f30-4d70-b51c-33e41944dfd7
+        start: 1759585277858
+        stop: 1759585277858
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 9efb9388-32c3-4b70-af31-8394d0f28878
+        start: 1759585278502
+        stop: 1759585278502
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: e4746774-85e5-44ba-9bf7-acd3f1124f03
+        start: 1759585279179
+        stop: 1759585279179
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 935cc52f-b064-4667-af95-a9d4acb8ad14
+        start: 1759585279852
+        stop: 1759585279852
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 592edd0e-c432-43a8-814f-73d799cabfc5
+        start: 1759585280455
+        stop: 1759585280455
+        parameters: null
+    }, class FixtureResult {
+        name: testMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: d5882d33-3eee-402c-a63f-ec04f6567890
+        start: 1759585281653
+        stop: 1759585281653
+        parameters: null
+    }]
+    afterEachTest: [class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 828c866a-a7fb-4541-aa5e-0bfed66f9ded
+        start: 1759585276225
+        stop: 1759585276225
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: eb1948cb-c166-4df3-9958-c422c35df21f
+        start: 1759585276794
+        stop: 1759585276794
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 87c23583-8f30-4d70-b51c-33e41944dfd7
+        start: 1759585277862
+        stop: 1759585277862
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 9efb9388-32c3-4b70-af31-8394d0f28878
+        start: 1759585278505
+        stop: 1759585278505
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: e4746774-85e5-44ba-9bf7-acd3f1124f03
+        start: 1759585279181
+        stop: 1759585279181
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 935cc52f-b064-4667-af95-a9d4acb8ad14
+        start: 1759585279855
+        stop: 1759585279857
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: 592edd0e-c432-43a8-814f-73d799cabfc5
+        start: 1759585280458
+        stop: 1759585280458
+        parameters: null
+    }, class FixtureResult {
+        name: teardownMethod
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: d5882d33-3eee-402c-a63f-ec04f6567890
+        start: 1759585281654
+        stop: 1759585281654
+        parameters: null
+    }]
+    beforeClassMethods: []
+    afterClassMethods: []
+    children: [828c866a-a7fb-4541-aa5e-0bfed66f9ded, eb1948cb-c166-4df3-9958-c422c35df21f, 87c23583-8f30-4d70-b51c-33e41944dfd7, 9efb9388-32c3-4b70-af31-8394d0f28878, e4746774-85e5-44ba-9bf7-acd3f1124f03, 935cc52f-b064-4667-af95-a9d4acb8ad14, 592edd0e-c432-43a8-814f-73d799cabfc5, d5882d33-3eee-402c-a63f-ec04f6567890]
+    start: 1759585276195
+    stop: 1759585282188
+}
+2025-10-04T16:41:23.984+0300 [Test worker] DEBUG ru.testit.services.AdapterManager - Stop main container class MainContainer {
+    uuid: efc4cbae-43ab-4be1-968e-d7e0d5075764
+    beforeMethods: [class FixtureResult {
+        name: testSetup
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: null
+        start: 1759585276199
+        stop: 1759585276204
+        parameters: null
+    }]
+    afterMethods: [class FixtureResult {
+        name: teardownClass
+        itemStatus: PASSED
+        itemStage: FINISHED
+        description: 
+        steps: []
+        linkItems: []
+        attachments: []
+        parent: null
+        start: 1759585282188
+        stop: 1759585282188
+        parameters: null
+    }]
+    children: [58F31CB0CD0BEF7DAF18351CB528D69AE7DDF6C075244E60709F7F8F2A13B5B4]
+    start: 1759585276193
+    stop: 1759585283984
+}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 4 окт. 2025 г., 16:41:29</p>
+</div>
+</div>
+</body>
+</html>
