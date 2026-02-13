@@ -1,4 +1,4 @@
-name: JUnit5 Maven Tests
+name: JUnit5 Gradle Tests
 
 on:
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   run-tests:
-    name: Run JUnit5 tests (Java)
+    name: Run JUnit5 tests
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -21,19 +21,37 @@ jobs:
 
     - name: Get data from webhook
       run: |
+        echo "ADAPTER_MODE=${{ github.event.client_payload.adapter_mode }}" >> $GITHUB_ENV
+        echo "TMS_URL=${{ github.event.client_payload.url }}" >> $GITHUB_ENV
         echo "TEST_RUN_ID=${{ github.event.client_payload.test_run_id }}" >> $GITHUB_ENV
         echo "PROJECT_ID=${{ github.event.client_payload.project_id }}" >> $GITHUB_ENV
         echo "CONFIGURATION_IDS=${{ github.event.client_payload.configuration_id[0] }}" >> $GITHUB_ENV
 
-    - name: Run tests
+    - name: Run tests (adapterMode=0)
+      if: env.ADAPTER_MODE == '0'
       run: |
         gradle test \
-          -DtmsUrl=${{ secrets.TMS_URL }} \
+          -DtmsUrl=$TMS_URL \
           -DtmsPrivateToken=${{ secrets.TMS_PRIVATE_TOKEN }} \
           -DtmsProjectId=$PROJECT_ID \
           -DtmsConfigurationId=$CONFIGURATION_IDS \
           -DtmsAdapterMode=0 \
           -DtmsTestRunId=$TEST_RUN_ID \
-          -DtmsCertValidation=true \
+          -DtmsTestRunName="Запуск автотестов с фильтром (adapterMode=0)" \
+          -DtmsCertValidation=false \
+          -DtmsImportRealtime=true \
+          -DtmsTestIt=true
+
+    - name: Run tests (adapterMode=2)
+      if: env.ADAPTER_MODE == '2'
+      run: |
+        gradle test \
+          -DtmsUrl=$TMS_URL \
+          -DtmsPrivateToken=${{ secrets.TMS_PRIVATE_TOKEN }} \
+          -DtmsProjectId=$PROJECT_ID \
+          -DtmsConfigurationId=$CONFIGURATION_IDS \
+          -DtmsAdapterMode=2 \
+          -DtmsTestRunName="Запуск всех автотестов (adapterMode=2)" \
+          -DtmsCertValidation=false \
           -DtmsImportRealtime=true \
           -DtmsTestIt=true
