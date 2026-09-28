@@ -56,7 +56,6 @@ jobs:
         # Если результат автотеста "завис" в sync-storage, через 600 с он будет применён принудительно
         TMS_SYNC_STORAGE_AUTOCOMPLETE_FALLBACK_S: '600'
       run: |
-        mkdir -p logs
         # adapterMode=0 — sync-storage привязывается к прогону из вебхука
         # adapterMode=2 — прогон создаёт адаптер, testRunId не передаём
         SYNC_ARGS=()
@@ -68,7 +67,7 @@ jobs:
           --port 49152 \
           --baseURL ${{ env.TMS_URL }} \
           --privateToken ${{ secrets.TMS_PRIVATE_TOKEN }} \
-          > logs/syncstorage.log 2>&1 &
+          > service.log 2>&1 &
         echo $! > syncstorage.pid
         sleep 3
 
@@ -116,6 +115,6 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: syncstorage-log-${{ github.run_id }}-${{ github.run_attempt }}
-        path: logs/syncstorage.log
+        path: service.log
         retention-days: 1
         if-no-files-found: ignore
