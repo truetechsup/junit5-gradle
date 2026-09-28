@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -27,31 +27,79 @@ jobs:
         echo "PROJECT_ID=${{ github.event.client_payload.project_id }}" >> $GITHUB_ENV
         echo "CONFIGURATION_IDS=${{ github.event.client_payload.configuration_id[0] }}" >> $GITHUB_ENV
 
-    - name: Run tests (adapterMode=0)
+    - name: Download sync-storage (adapterMode=0)
       if: env.ADAPTER_MODE == '0'
       run: |
-        gradle test \
-          -DtmsUrl=$TMS_URL \
+        mkdir -p .caches
+        # Получаем JSON последнего релиза
+        RELEASE_JSON=$(curl -s "https://api.github.com/repos/testit-tms/sync-storage-public/releases/latest")
+        LATEST_VERSION=$(echo "$RELEASE_JSON" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        if [ -z "$LATEST_VERSION" ]; then
+          echo "Failed to get latest version"
+          exit 1
+        fi
+        echo "Latest sync-storage version: $LATEST_VERSION"
+
+        # Ищем актив для linux_amd64
+        DOWNLOAD_URL=$(echo "$RELEASE_JSON" | grep -o '"browser_download_url": "[^"]*linux_amd64"' | sed -E 's/.*"([^"]+)".*/\1/')
+        if [ -z "$DOWNLOAD_URL" ]; then
+          echo "Could not find linux_amd64 binary in release"
+          exit 1
+        fi
+
+        curl -L -o .caches/syncstorage-linux-amd64 "$DOWNLOAD_URL"
+        chmod +x .caches/syncstorage-linux-amd64
+        # Проверка, что скачан реальный исполняемый файл
+        file .caches/syncstorage-linux-amd64 | grep -q "ELF.*executable" || { echo "Downloaded file is not an executable"; cat .caches/syncstorage-linux-amd64 | head -c 200; exit 1; }
+
+    - name: Start sync-storage (adapterMode=0)
+      if: env.ADAPTER_MODE == '0'
+      run: |
+        nohup .caches/syncstorage-linux-amd64 \
+          --testRunId ${{ env.TEST_RUN_ID }} \
+          --port 49152 \
+          --baseURL ${{ env.TMS_URL }} \
+          --privateToken ${{ secrets.TMS_PRIVATE_TOKEN }} \
+          > service.log 2>&1 &
+        echo $! > syncstorage.pid
+        sleep 3
+
+    - name: Run tests
+      run: |
+        # adapterMode=0 — результаты пишутся в существующий прогон из вебхука
+        # adapterMode=2 — адаптер сам создаёт новый прогон, testRunId не передаём
+        TEST_RUN_ARGS=()
+        if [ "${{ env.ADAPTER_MODE }}" == "0" ]; then
+          TEST_RUN_ARGS+=(-DtmsTestRunId=${{ env.TEST_RUN_ID }} -DtmsSyncStoragePort=49152)
+        fi
+        TEST_RUN_LINKS=$(jq -nc \
+          --arg runUrl "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+          '[{url: $runUrl, title: "GitHub Actions pipeline", type: "Related"}]')
+        chmod +x ./gradlew
+        ./gradlew test \
+          -DtmsUrl=${{ env.TMS_URL }} \
           -DtmsPrivateToken=${{ secrets.TMS_PRIVATE_TOKEN }} \
-          -DtmsProjectId=$PROJECT_ID \
-          -DtmsConfigurationId=$CONFIGURATION_IDS \
-          -DtmsAdapterMode=0 \
-          -DtmsTestRunId=$TEST_RUN_ID \
-          -DtmsTestRunName="Запуск автотестов с фильтром (adapterMode=0)" \
+          -DtmsProjectId=${{ env.PROJECT_ID }} \
+          -DtmsConfigurationId=${{ env.CONFIGURATION_IDS }} \
+          "${TEST_RUN_ARGS[@]}" \
+          -DtmsTestRunName="GitHub Actions #${{ github.run_number }} (adapterMode=${{ env.ADAPTER_MODE }})" \
+          -DtmsTestRunLinks="$TEST_RUN_LINKS" \
+          -DtmsAdapterMode=${{ env.ADAPTER_MODE }} \
           -DtmsCertValidation=false \
           -DtmsImportRealtime=true \
           -DtmsTestIt=true
 
-    - name: Run tests (adapterMode=2)
-      if: env.ADAPTER_MODE == '2'
+    - name: Wait for sync-storage completion (adapterMode=0)
+      if: always() && env.ADAPTER_MODE == '0'
       run: |
-        gradle test \
-          -DtmsUrl=$TMS_URL \
-          -DtmsPrivateToken=${{ secrets.TMS_PRIVATE_TOKEN }} \
-          -DtmsProjectId=$PROJECT_ID \
-          -DtmsConfigurationId=$CONFIGURATION_IDS \
-          -DtmsAdapterMode=2 \
-          -DtmsTestRunName="Запуск всех автотестов (adapterMode=2)" \
-          -DtmsCertValidation=false \
-          -DtmsImportRealtime=true \
-          -DtmsTestIt=true
+        curl -v "http://127.0.0.1:49152/wait-completion?testRunId=${{ env.TEST_RUN_ID }}" || true
+        if [ -f syncstorage.pid ]; then
+          kill $(cat syncstorage.pid) || true
+        fi
+
+    - name: Upload sync-storage logs (on failure)
+      if: failure() && env.ADAPTER_MODE == '0'
+      uses: actions/upload-artifact@v4
+      with:
+        name: syncstorage-logs
+        path: service.log

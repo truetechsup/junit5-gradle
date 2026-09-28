@@ -21,7 +21,7 @@ tasks.withType(JavaCompile).configureEach {
     options.compilerArgs.add("-parameters")
 }
 
-def adapterVersion = "2.10.1"
+def adapterVersion = "latest.release"
 
 dependencies {
     testImplementation "ru.testit:testit-java-commons:$adapterVersion"
