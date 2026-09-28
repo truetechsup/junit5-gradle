@@ -19,8 +19,16 @@
 
 | `adapter_mode` | Что происходит | Имя прогона |
 |---|---|---|
-| `0` | Результаты пишутся в существующий прогон, `test_run_id` берётся из webhook. Sync-storage запускается в workflow. | `GitHub Actions #<run_number> (adapterMode=0)` |
+| `0` | Результаты пишутся в существующий прогон, `test_run_id` берётся из webhook. | `GitHub Actions #<run_number> (adapterMode=0)` |
 | `2` | Адаптер сам создаёт новый прогон, `test_run_id` не передаётся. | `GitHub Actions #<run_number> (adapterMode=2)` |
+
+### Sync-storage
+
+Sync-storage запускается в workflow в обоих режимах (порт `49152`):
+
+* запускается с `TMS_SYNC_STORAGE_AUTOCOMPLETE_FALLBACK_S=600`, чтобы результат автотеста, удержанный в sync-storage, всё равно был применён;
+* после тестов workflow вызывает `/wait-completion` и останавливает sync-storage только после применения всех результатов;
+* лог sync-storage сохраняется в артефакт `syncstorage-log-<run_id>-<attempt>` и хранится 1 сутки.
 
 ### Данные из webhook
 

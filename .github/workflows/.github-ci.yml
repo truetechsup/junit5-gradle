@@ -27,8 +27,7 @@ jobs:
         echo "PROJECT_ID=${{ github.event.client_payload.project_id }}" >> $GITHUB_ENV
         echo "CONFIGURATION_IDS=${{ github.event.client_payload.configuration_id[0] }}" >> $GITHUB_ENV
 
-    - name: Download sync-storage (adapterMode=0)
-      if: env.ADAPTER_MODE == '0'
+    - name: Download sync-storage
       run: |
         mkdir -p .caches
         # Получаем JSON последнего релиза
@@ -52,15 +51,24 @@ jobs:
         # Проверка, что скачан реальный исполняемый файл
         file .caches/syncstorage-linux-amd64 | grep -q "ELF.*executable" || { echo "Downloaded file is not an executable"; cat .caches/syncstorage-linux-amd64 | head -c 200; exit 1; }
 
-    - name: Start sync-storage (adapterMode=0)
-      if: env.ADAPTER_MODE == '0'
+    - name: Start sync-storage
+      env:
+        # Если результат автотеста "завис" в sync-storage, через 600 с он будет применён принудительно
+        TMS_SYNC_STORAGE_AUTOCOMPLETE_FALLBACK_S: '600'
       run: |
+        mkdir -p logs
+        # adapterMode=0 — sync-storage привязывается к прогону из вебхука
+        # adapterMode=2 — прогон создаёт адаптер, testRunId не передаём
+        SYNC_ARGS=()
+        if [ "${{ env.ADAPTER_MODE }}" == "0" ]; then
+          SYNC_ARGS+=(--testRunId ${{ env.TEST_RUN_ID }})
+        fi
         nohup .caches/syncstorage-linux-amd64 \
-          --testRunId ${{ env.TEST_RUN_ID }} \
+          "${SYNC_ARGS[@]}" \
           --port 49152 \
           --baseURL ${{ env.TMS_URL }} \
           --privateToken ${{ secrets.TMS_PRIVATE_TOKEN }} \
-          > service.log 2>&1 &
+          > logs/syncstorage.log 2>&1 &
         echo $! > syncstorage.pid
         sleep 3
 
@@ -70,7 +78,7 @@ jobs:
         # adapterMode=2 — адаптер сам создаёт новый прогон, testRunId не передаём
         TEST_RUN_ARGS=()
         if [ "${{ env.ADAPTER_MODE }}" == "0" ]; then
-          TEST_RUN_ARGS+=(-DtmsTestRunId=${{ env.TEST_RUN_ID }} -DtmsSyncStoragePort=49152)
+          TEST_RUN_ARGS+=(-DtmsTestRunId=${{ env.TEST_RUN_ID }})
         fi
         TEST_RUN_LINKS=$(jq -nc \
           --arg runUrl "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
@@ -82,6 +90,7 @@ jobs:
           -DtmsProjectId=${{ env.PROJECT_ID }} \
           -DtmsConfigurationId=${{ env.CONFIGURATION_IDS }} \
           "${TEST_RUN_ARGS[@]}" \
+          -DtmsSyncStoragePort=49152 \
           -DtmsTestRunName="GitHub Actions #${{ github.run_number }} (adapterMode=${{ env.ADAPTER_MODE }})" \
           -DtmsTestRunLinks="$TEST_RUN_LINKS" \
           -DtmsAdapterMode=${{ env.ADAPTER_MODE }} \
@@ -89,17 +98,24 @@ jobs:
           -DtmsImportRealtime=true \
           -DtmsTestIt=true
 
-    - name: Wait for sync-storage completion (adapterMode=0)
-      if: always() && env.ADAPTER_MODE == '0'
+    - name: Wait for sync-storage completion
+      if: always()
       run: |
-        curl -v "http://127.0.0.1:49152/wait-completion?testRunId=${{ env.TEST_RUN_ID }}" || true
+        # Ждём, пока sync-storage применит все результаты (включая удержанные), и только потом останавливаем его
+        WAIT_URL="http://127.0.0.1:49152/wait-completion"
+        if [ "${{ env.ADAPTER_MODE }}" == "0" ]; then
+          WAIT_URL="$WAIT_URL?testRunId=${{ env.TEST_RUN_ID }}"
+        fi
+        curl -v --max-time 900 "$WAIT_URL" || true
         if [ -f syncstorage.pid ]; then
           kill $(cat syncstorage.pid) || true
         fi
 
-    - name: Upload sync-storage logs (on failure)
-      if: failure() && env.ADAPTER_MODE == '0'
+    - name: Upload sync-storage log
+      if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: syncstorage-logs
-        path: service.log
+        name: syncstorage-log-${{ github.run_id }}-${{ github.run_attempt }}
+        path: logs/syncstorage.log
+        retention-days: 1
+        if-no-files-found: ignore
