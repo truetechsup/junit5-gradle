@@ -1,0 +1,24 @@
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+out/
+
+# Gradle
+.gradle/
+build/
+
+# Sync-storage
+.caches/
+service.log
+syncstorage.pid
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

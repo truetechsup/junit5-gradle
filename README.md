@@ -60,5 +60,6 @@ Sync-storage запускается в workflow в обоих режимах (п
     * **StepsTests.java** – примеры [шагов testit-adapter-junit5](https://github.com/testit-tms/adapters-java/tree/main/testit-adapter-junit5#annotations)
 * **src/test/resources/** – ресурсы для тестов
     * **attachments/** – файлы вложений
-    * **testit.properties** – базовая конфигурация адаптера
 * **build.gradle** – сборка проекта и подключение адаптера
+
+Конфигурация адаптера (URL, токен, проект, конфигурация, режим) передаётся из workflow через `-Dtms*` параметры, файла `testit.properties` в проекте нет.
