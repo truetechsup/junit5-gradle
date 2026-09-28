@@ -52,10 +52,9 @@ jobs:
         file .caches/syncstorage-linux-amd64 | grep -q "ELF.*executable" || { echo "Downloaded file is not an executable"; cat .caches/syncstorage-linux-amd64 | head -c 200; exit 1; }
 
     - name: Start sync-storage
-      env:
-        # Если результат автотеста "завис" в sync-storage, через 600 с он будет применён принудительно
-        TMS_SYNC_STORAGE_AUTOCOMPLETE_FALLBACK_S: '600'
       run: |
+        # Если результат автотеста "завис" в sync-storage, через 600 с он будет применён принудительно
+        export TMS_SYNC_STORAGE_AUTOCOMPLETE_FALLBACK_S=600
         # adapterMode=0 — sync-storage привязывается к прогону из вебхука
         # adapterMode=2 — прогон создаёт адаптер, testRunId не передаём
         SYNC_ARGS=()
